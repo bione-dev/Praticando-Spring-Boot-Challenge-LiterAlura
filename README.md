@@ -90,7 +90,7 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 
 ---
 
-## Próximos Passos
+## Implementações possíveis
 
 * Implementar a funcionalidade para listar autores vivos usando consulta derivada no banco.
 * Adicionar opções para atualizar e remover livros e autores.
