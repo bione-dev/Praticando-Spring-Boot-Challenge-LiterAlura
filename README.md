@@ -37,8 +37,12 @@ Projeto Java Spring Boot que consome a API pública [Gutendex](https://gutendex.
     * Listar todos os livros buscados (tanto em memória quanto no banco).
     * Listar autores únicos dos livros buscados.
     * Listar autores vivos em determinado ano (baseado em consultas derivadas no banco).
+  
+4. **Listar autores vivos no ano escolhido**
 
-4. **Estatísticas**
+   * Consulta para listar autores que estavam vivos em um ano informado pelo usuário, usando derived queries no banco.
+
+5. **Estatísticas**
 
     * Exibir a quantidade de livros armazenados em um determinado idioma.
     * Suporte para idiomas limitados (ex: `en` para inglês e `pt` para português).
@@ -85,14 +89,13 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 * **Buscar livros:** Informe título ou autor para buscar na API e salvar localmente.
 * **Listar livros:** Exibe os livros armazenados na memória durante a execução atual.
 * **Listar autores:** Mostra os autores únicos dos livros buscados.
-* **Autores vivos:** (Funcionalidade a implementar) Listar autores vivos em um ano específico.
+* **Autores vivos:** Listar autores vivos em um ano específico.
 * **Estatísticas:** Informar um idioma para saber a quantidade de livros naquele idioma no banco.
 
 ---
 
 ## Implementações possíveis
 
-* Implementar a funcionalidade para listar autores vivos usando consulta derivada no banco.
 * Adicionar opções para atualizar e remover livros e autores.
 * Melhorar validação e tratamento de exceções na interação com o usuário.
 * Interface gráfica para melhorar a usabilidade.
