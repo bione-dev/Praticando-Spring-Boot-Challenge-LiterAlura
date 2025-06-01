@@ -134,6 +134,20 @@ public class Main implements CommandLineRunner {
                         }
                         break;
 
+                    case "5":
+                        System.out.println("Escolha um idioma para consultar (en / pt): ");
+                        String idioma = scanner.nextLine().trim().toLowerCase();
+
+                        if (!idioma.equals("en") && !idioma.equals("pt")) {
+                            System.out.println("Idioma inválido. Escolha 'en' ou 'pt'.");
+                            break;
+                        }
+
+                        long totalLivros = livroRepository.countByIdioma(idioma);
+                        System.out.println("Total de livros no idioma '" + idioma + "': " + totalLivros);
+                        break;
+
+
                     case "0":
                         continuar = false;
                         System.out.println("Saindo da aplicação.");
@@ -162,6 +176,7 @@ public class Main implements CommandLineRunner {
         System.out.println("2 - Listar todos os livros buscados");
         System.out.println("3 - Listar autores dos livros buscados");
         System.out.println("4 - Listar autores vivos em determinado ano");
+        System.out.println("5 - Total de livros por idioma");
         System.out.println("0 - Sair");
     }
 
